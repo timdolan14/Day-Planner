@@ -2,22 +2,41 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-var currentHour = dayjs().format("HH");
-var timedisplayEl = $('#currentDay');
+
+var currentTime = dayjs.format(H);
+var today = moment().format('MMMM Do YYYY, h:mm:ss a');
+$("currentDay").text(today);
 
 
-function displayTime () {
-  var today = dayjs().format('MMMM Do YYYY, h:mm:ss a');
-  timedisplayEl.text(today);
-}
 
-$(".savebtn").on('click', function () {
+$(".savebtn").on('click', function () {});
 
-});
+function planner () {
+  var currentTime = dayjs.format(H);
 
 $('.time-block').each(function () {
+  var block = ($(this).attr('id').split("hour")[1]);
 
-}); 
+  if (plannerBlock < currentTime) {
+    $(this).removeClass('future');
+    $(this).removeClass('present');
+    $(this).addClass('past');
+
+  } else if (plannerBlock === currentTime) {
+    $(this).removeClass('future');
+    $(this).removeClass('past');
+    $(this).addClass('present');
+
+  } else {
+    $(this).addClass('future');
+    $(this).removeClass('present');
+    $(this).removeClass('past');
+  }
+
+  })
+
+}
+
 
 
   // TODO: Add a listener for click events on the save button. This code should
