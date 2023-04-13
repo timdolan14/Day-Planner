@@ -5,20 +5,16 @@
 
 var currentTime = dayjs.format(H);
 var today = moment().format('MMMM Do YYYY, h:mm:ss a');
-   $("currentDay").text(today);
+$("currentDay").text(today);
+var plannerBlock = ($(this).attr('id'));
 
 
-
-$(".savebtn").on('click', function () {});
-
-function planner () {
-  var currentTime = dayjs.format(H);
+function hourBlocking () {
 
 $('.time-block').each(function () {
-  var plannerBlock = ($(this).attr('id'));
 
-  // 'this' refers to the time-block element in the HTML file (declared above)
-
+  // 'this' is referring to the time-block element in the HTML file (declared above)
+  // Going into the HTML to find "time-block" and its ID
   // If the plannerBlock (current hour) is less than the currentTime (right now), 
   // Add past to the ID in the html
   
@@ -47,6 +43,16 @@ $('.time-block').each(function () {
   })
 
 }
+
+function planner () {
+
+
+};
+
+$(".savebtn").on('click', function () {
+
+
+});
 
 
 
