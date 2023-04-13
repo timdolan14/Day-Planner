@@ -19,16 +19,16 @@ $('.time-block').each(function () {
 
   // 'this' refers to the time-block element in the HTML file (declared above)
 
-  // if the plannerBlock (current hour) is less than the currentTime (right now), 
-  // add past to the ID in the html
+  // If the plannerBlock (current hour) is less than the currentTime (right now), 
+  // Add past to the ID in the html
   
   if (plannerBlock < currentTime) {
     $(this).removeClass('future');
     $(this).removeClass('present');
     $(this).addClass('past');
 
-    // if the plannerBlock (current hour) is equal to the currentTime (right now), 
-    // add present to the ID in the html
+    // If the plannerBlock (current hour) is equal to the currentTime (right now), 
+    // Add present to the ID in the html
 
   } else if (plannerBlock === currentTime) {
     $(this).removeClass('future');
