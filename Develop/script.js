@@ -5,9 +5,10 @@
 // Display date and time on top
 $("#currentDay").text(dayjs().format('dddd MMMM DD YYYY, h:mm A'));
 
-function hourBlocking () {
+// function hourBlocking () {
 
-  var currentTime = dayjs.format('HH');
+var currentTime = dayjs().format('HH');
+
 
 $('.time-block').each(function () {
 
@@ -18,7 +19,8 @@ $('.time-block').each(function () {
   // If the plannerHour(current hour) is less than the currentTime (right now), 
   // Add past to the ID in the html
   
-  if (plannerHour < currentTime) {
+  if (plannerHour > currentTime) {
+    console.log("past");
     $(this).removeClass('future');
     $(this).removeClass('present');
     $(this).addClass('past');
@@ -26,7 +28,8 @@ $('.time-block').each(function () {
     // If the plannerHour (current hour) is equal to the currentTime (right now), 
     // Add present to the ID in the html
 
-  } else if (plannerHour === currentTime) {
+  } if (plannerHour === currentTime) {
+    console.log("present");
     $(this).removeClass('future');
     $(this).removeClass('past');
     $(this).addClass('present');
@@ -34,15 +37,18 @@ $('.time-block').each(function () {
     // if the plannerHour (current hour) is greater than the currentTime (right now), 
     // add future to the ID in the html
 
-  } else if (plannerHour > currentTime) {
+  } if (plannerHour < currentTime) {
+    console.log("future");
     $(this).addClass('future');
     $(this).removeClass('present');
     $(this).removeClass('past');
   }
 
-  })
-  hourBlocking ();
-}
+  });
+  
+
+
+
 
 function planner () {
 
