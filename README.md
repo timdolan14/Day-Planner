@@ -4,6 +4,8 @@
 
 ## Github Repo
 
+https://github.com/timdolan14/Day-Planner
+
 ## Description
 
 I have created a Day Planner that allows users to add & save Events on a per hour basis. Future hours will be highlighted in green, the current hour will be highlighted in red and past hours will be shown in gray. Users will be able to leave the page and come back at any point to see their events, if the Users saves them via the button next to each hour-column. 
