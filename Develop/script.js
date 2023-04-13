@@ -2,10 +2,11 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
+// Display date and time on top
+var today = (moment().format('MMMM Do YYYY, h:mm:ss a'));
+$(".currentDay").text(today);
 
 var currentTime = dayjs.format(H);
-var today = moment().format('MMMM Do YYYY, h:mm:ss a');
-$("currentDay").text(today);
 var plannerBlock = ($(this).attr('id'));
 
 
