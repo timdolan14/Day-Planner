@@ -55,7 +55,6 @@ function savePlanner () {
   $("#hour-16 .description").val(localStorage.getItem("hour-16"))
   $("#hour-17 .description").val(localStorage.getItem("hour-17"))
   $("#hour-18 .description").val(localStorage.getItem("hour-18"))
-  $("#hour-19 .description").val(localStorage.getItem("hour-19"))
 };
 
 $(".saveBtn").on('click', function () {
