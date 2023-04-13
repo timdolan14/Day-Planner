@@ -15,7 +15,7 @@ function planner () {
   var currentTime = dayjs.format(H);
 
 $('.time-block').each(function () {
-  var block = ($(this).attr('id').split("hour")[1]);
+  var plannerBlock = ($(this).attr('id'[0]));
 
   if (plannerBlock < currentTime) {
     $(this).removeClass('future');
