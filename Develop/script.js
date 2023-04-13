@@ -3,16 +3,17 @@
 // in the html.
 
 // Display date and time on top
-var today = (moment().format('MMMM Do YYYY, h:mm:ss a'));
-$(".currentDay").text(today);
+$("#currentDay").text(moment().format("MMMM Do YYYY"));
 
 var currentTime = dayjs.format(H);
-var plannerBlock = ($(this).attr('id'));
+
 
 
 function hourBlocking () {
 
 $('.time-block').each(function () {
+
+  var plannerBlock = $(".time-block").attr('id');
 
   // 'this' is referring to the time-block element in the HTML file (declared above)
   // Going into the HTML to find "time-block" and its ID
@@ -47,15 +48,9 @@ $('.time-block').each(function () {
 
 function planner () {
 
-
 };
 
-$(".savebtn").on('click', function () {
-
-
-});
-
-
+$(".saveBtn").on('click', function () {});
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
