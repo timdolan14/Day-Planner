@@ -27,7 +27,7 @@ $('.time-block').each(function () {
     $(this).removeClass('past');
     $(this).addClass('present');
 
-  } else {
+  } else if (plannerBlock > currentTime) {
     $(this).addClass('future');
     $(this).removeClass('present');
     $(this).removeClass('past');
