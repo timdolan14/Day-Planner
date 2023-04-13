@@ -3,11 +3,9 @@
 // in the html.
 
 // Display date and time on top
-$("#currentDay").text(moment().format("MMMM Do YYYY"));
+$("#currentDay").text(dayjs().format('dddd MMMM DD YYYY, h:mm A'));
 
 var currentTime = dayjs.format(H);
-
-
 
 function hourBlocking () {
 
