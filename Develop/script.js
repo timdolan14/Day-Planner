@@ -5,50 +5,55 @@
 // Display date and time on top
 $("#currentDay").text(dayjs().format('dddd MMMM DD YYYY, h:mm A'));
 
-var currentTime = dayjs.format(H);
-
 function hourBlocking () {
+
+  var currentTime = dayjs.format('HH');
 
 $('.time-block').each(function () {
 
-  var plannerBlock = $(".time-block").attr('id');
+  var plannerHour = $(".time-block").attr('id');
 
   // 'this' is referring to the time-block element in the HTML file (declared above)
   // Going into the HTML to find "time-block" and its ID
-  // If the plannerBlock (current hour) is less than the currentTime (right now), 
+  // If the plannerHour(current hour) is less than the currentTime (right now), 
   // Add past to the ID in the html
   
-  if (plannerBlock < currentTime) {
+  if (plannerHour < currentTime) {
     $(this).removeClass('future');
     $(this).removeClass('present');
     $(this).addClass('past');
 
-    // If the plannerBlock (current hour) is equal to the currentTime (right now), 
+    // If the plannerHour (current hour) is equal to the currentTime (right now), 
     // Add present to the ID in the html
 
-  } else if (plannerBlock === currentTime) {
+  } else if (plannerHour === currentTime) {
     $(this).removeClass('future');
     $(this).removeClass('past');
     $(this).addClass('present');
 
-    // if the plannerBlock (current hour) is greater than the currentTime (right now), 
+    // if the plannerHour (current hour) is greater than the currentTime (right now), 
     // add future to the ID in the html
 
-  } else if (plannerBlock > currentTime) {
+  } else if (plannerHour > currentTime) {
     $(this).addClass('future');
     $(this).removeClass('present');
     $(this).removeClass('past');
   }
 
   })
-
+  hourBlocking ();
 }
 
 function planner () {
 
 };
 
-$(".saveBtn").on('click', function () {});
+$(".saveBtn").on('click', function () {
+  console.log("save");
+
+});
+
+
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
