@@ -2,7 +2,11 @@
 
 ## Deployed URL
 
+https://timdolan14.github.io/Day-Planner/
+
 ## Github Repo
+
+https://github.com/timdolan14/Day-Planner
 
 ## Description
 
