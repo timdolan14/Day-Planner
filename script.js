@@ -5,6 +5,9 @@ $("#currentDay").text(dayjs().format('dddd MMMM DD YYYY, h:mm A'));
 var currentTime = dayjs().hour();
 
 $('.time-block').each(function () {
+  
+//   Converting the number in the ID ("Hour-16" to an INT so we can compare to the CurrentTime
+//   var above
 
   var plannerHour = parseInt($(this).attr('id').split("-")[1]);
   console.log(plannerHour);
