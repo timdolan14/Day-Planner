@@ -1,4 +1,4 @@
-## Day-Planner
+## Day Planner
 
 ## Deployed URL
 
